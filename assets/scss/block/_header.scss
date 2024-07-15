@@ -1,0 +1,152 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 67px;
+    align-items: center;
+    padding-left: 145px;
+    padding-right: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+    &_text {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    &_text li a {
+        font-family: Varta;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: left;
+        color: #706458;
+    }
+
+    &_foto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &_comment i {
+        font-size: 25px;
+        color: white;
+    }
+
+    &_comment {
+        width: (50px);
+        height: (50px);
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+        display: flex;
+        justify-content: center;
+        padding-top: 9px;
+        position: absolute;
+        right: 20px
+    }
+}
+
+.bacround {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    // height: 100%;
+    background-image: url(../images/Hero\ Background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 57px;
+    padding-right: 10px;
+    padding-left: 614px;
+    z-index: -10;
+    align-items: center;
+}
+
+.bars {
+    position: absolute;
+    // top: 0;
+    // bottom: 0;
+    padding-top: 15px;
+    right: 20px;
+    // left: 0;
+    z-index: 100;
+    display: none;
+}
+
+@media (max-width:1155px) {
+    .bacround {
+        height: 70%;
+    }
+}
+
+@media (max-width:1100px) {
+    .header_text li a {
+        color: white;
+    }
+
+    .bacround {
+        height: 70%;
+    }
+
+}
+
+@media (max-width:750px) {
+
+    .header_comment {
+        display: none;
+    }
+
+    .header_text li a {
+        color: white;
+    }
+
+    .header {
+        padding-left: 12px;
+        padding-right: 0px;
+    }
+
+    .bacround {
+        height: 60%;
+    }
+
+    .bars {
+        display: block;
+    }
+}
+
+@media (max-width:612px) {
+    .header_text {
+        display: none;
+    }
+
+
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    --c: #000;
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    color: #0000;
+    overflow: hidden;
+    text-shadow: 0 0 var(--c), 11ch 0 var(--c);
+    animation: l6 2s infinite linear;
+}
+
+.loader:before {
+    content: "Loading..."
+}
+
+@keyframes l6 {
+    to {
+        text-shadow: -11ch 0 var(--c), 0ch 0 var(--c)
+    }
+}
